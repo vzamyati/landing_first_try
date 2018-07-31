@@ -1,0 +1,106 @@
+header {
+	background-image: url(../img/bcg.jpg);
+	background-repeat: no-repeat;
+	background-position: top;
+	position: fixed;
+    top:0;
+    left:0; 
+    min-width:100%;
+    min-height:100%;
+}
+
+.right_pink_box {
+	background-color: rgba(252, 80, 148, 1);
+	min-height: 1080px;
+	min-width: 481px;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.right_pink_stripe {
+	background-color: rgba(252, 80, 148, 1);
+	min-height: 860px;
+	min-width: 14px;
+	position: absolute;
+	right: 467px;
+	top: 0;
+}
+
+.right_white_box {
+	background-color: #fff;
+	min-height: 860px;
+	min-width: 465px;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+
+.icon {
+	background-image: url(../img/icon.png);
+    min-width: 120px;
+    min-height: 100px;
+    position: absolute;
+    right: 411px;
+    bottom: 690px
+}
+
+.header_text strong {
+	font-family: "OpenSans-Bold";
+	display: block;
+	color: rgb(252, 80, 148);
+	text-transform: uppercase;
+	font-size: 31px;
+	margin-top: 100px;
+	margin-left: 75px;
+	letter-spacing: 3px;
+}
+
+.text {
+	font-family: "OpenSans-SemiBold";
+	display: block;
+	color: #3b3b3b;
+	text-transform: uppercase;
+	font-size: 24px;
+	margin-top: -10px;
+	margin-left: 75px;
+	line-height: 28px;
+	letter-spacing: 1px;
+}
+
+.question strong {
+	font-family: "OpenSans-Bold";
+	display: block;
+	color: #3b3b3b;
+	text-transform: uppercase;
+	font-size: 34px;
+	margin-top: 145px;
+	margin-left: 75px;
+	letter-spacing: 3px;
+}
+
+.button {
+	display: inline-block;
+    background-color: rgb(252, 80, 148);
+    height: 80px;
+    width: 282px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 38px;
+    margin-top: 20px;
+    margin-left: 77px;
+    color: #fff;
+    font-family: "OpenSans-Bold";
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-decoration: none;
+    border-radius: 20px;
+}
+
+.footer {
+	background-color: rgba(255, 255, 255, 0.74);
+	bottom: 0px;
+	width: 1445px;
+	height: 80px;
+	position: fixed;
+}
