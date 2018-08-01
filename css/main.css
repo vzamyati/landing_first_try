@@ -1,81 +1,83 @@
-header {
-	background-image: url(../img/bcg.jpg);
+body {
+	margin:0;
+	padding:0;
+	height: 100%;
+}
+
+.container {
+	background-image: linear-gradient(to left, rgb(58, 3, 30) -10%, transparent 90%), url(../img/bcg.png);
 	background-repeat: no-repeat;
-	background-position: top;
+	background-size: cover;
+	background-attachment: fixed;
+	margin: 0;
+	height: 100%;
+	min-width: 100%;
 	position: fixed;
-    top:0;
-    left:0; 
-    min-width:100%;
-    min-height:100%;
 }
 
-.right_pink_box {
-	background-color: rgba(252, 80, 148, 1);
-	min-height: 1080px;
-	min-width: 481px;
-	position: absolute;
-	right: 0;
-	top: 0;
+.pink_box {
+	z-index: 1;
+	background-color: #fc5094;
+	height: 100%;
+	width: 500px;
+	display: block;
+	float: right;
+	position: relative;
 }
 
-.right_pink_stripe {
-	background-color: rgba(252, 80, 148, 1);
-	min-height: 860px;
-	min-width: 14px;
-	position: absolute;
-	right: 467px;
-	top: 0;
-}
-
-.right_white_box {
+.white_box {
 	background-color: #fff;
-	min-height: 860px;
-	min-width: 465px;
-	position: absolute;
+	height: 80vh;
+	width: 487px;
+	display: block;
 	right: 0;
 	bottom: 0;
+	position: absolute;
 }
 
 .icon {
+	z-index: 3;
 	background-image: url(../img/icon.png);
-    min-width: 120px;
+	min-width: 120px;
     min-height: 100px;
     position: absolute;
-    right: 411px;
-    bottom: 690px
+    right: 431px;
+    bottom: 64%;
 }
 
-.header_text strong {
+.header_text span {
 	font-family: "OpenSans-Bold";
 	display: block;
 	color: rgb(252, 80, 148);
 	text-transform: uppercase;
 	font-size: 31px;
-	margin-top: 100px;
-	margin-left: 75px;
 	letter-spacing: 3px;
+	position: absolute;
+	margin-left: 75px;
+	bottom: 83%;
 }
 
-.text {
+.text p{
 	font-family: "OpenSans-SemiBold";
-	display: block;
 	color: #3b3b3b;
 	text-transform: uppercase;
 	font-size: 24px;
-	margin-top: -10px;
-	margin-left: 75px;
-	line-height: 28px;
 	letter-spacing: 1px;
+	line-height: 28px;
+	position: absolute;
+	margin-left: 75px;
+	top: 18%; 
 }
 
-.question strong {
+.question p {
 	font-family: "OpenSans-Bold";
 	display: block;
 	color: #3b3b3b;
 	text-transform: uppercase;
 	font-size: 34px;
-	margin-top: 145px;
+	position: absolute;
 	margin-left: 75px;
+	top: 45%; 
 	letter-spacing: 3px;
 }
 
@@ -87,7 +89,8 @@ header {
     text-align: center;
     line-height: 75px;
     font-size: 38px;
-    margin-top: 20px;
+    position: absolute;
+    top: 56%;
     margin-left: 77px;
     color: #fff;
     font-family: "OpenSans-Bold";
@@ -97,10 +100,50 @@ header {
     border-radius: 20px;
 }
 
-.footer {
-	background-color: rgba(255, 255, 255, 0.74);
-	bottom: 0px;
-	width: 1445px;
-	height: 80px;
-	position: fixed;
+.footer{
+   	background-color: rgba(255, 255, 255, 0.7);
+    font-family: "OpenSans-Bold";
+    font-size: 12px;
+	position:absolute;
+    letter-spacing: 1px;
+   	bottom:0;
+   	width:100%;
+   	height:80px;
 }
+
+.menu-main {
+  list-style: none;
+  padding: 25px 0 5px;
+  text-align: center;
+    margin-right: 605px;
+
+}
+
+.menu-main li {display: inline-block;}
+
+.menu-main li:last-child:after {content: none;}
+.menu-main li:last-child:after {content: none;}
+.menu-main a {
+  text-decoration: none;
+  font-family: "OpenSans-Bold";
+  letter-spacing: 1px;
+  position: relative;
+  margin: 0 -12px 0 17px;
+  font-size: 12px;
+  text-transform: uppercase;
+  display: inline-block;
+  transition: color .2s;
+}
+.menu-main a, .menu-main a:visited {color: #3b3b3b;}
+.menu-main a.current, .menu-main a:hover{color: #fff;}
+.menu-main a:before,
+.menu-main a:after {
+  position: absolute;
+  height: 4px;
+  top: auto;
+  bottom: -5px;
+  background: #feb386;
+  transition: .8s;
+}
+.menu-main a:hover:before, .menu-main .current:before {left: 0;}
+.menu-main a:hover:after, .menu-main .current:after {right: 0;}
