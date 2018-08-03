@@ -6,38 +6,115 @@
   <title>Тест</title>
   <link rel="stylesheet" href="css/main.css" />
   <link rel="stylesheet" href="css/fonts.css" />
+  
  </head>
  <body>
-    <div class="container">
-      <div class="footer">
-        <nav>
-          <ul class="menu-main">
-            <li><a href="#" > Название1 </a> </li>
-            <li><a href="#" > Название2 </a></li>
-            <li><a href="#" > Название3 </a></li>
-            <li><a href="#" > Название4 </a></li>
-            <li><a href="#" > Очень длинное название5 </a></li>
-            <li><a href="#" > очень очень длинное название6 </a></li>
-            <li><a href="#" > длинное название 7 </a></li>
-            <li><a href="#" > длинное название8 </a></li>
-          </ul>   
-        </nav>
-      </div>
-      <div class="pink_box">
-        <div class="white_box">
-          <div class="header_text">
-          <span>Lorem ipsum</span>
+    <section>
+      <div class="container">
+        <div class="bg-img">
+          <div class="ovelray" id="ov1">
+              <h1 class="percent" id="per1"></h1>
+              <h1 class="text_overlay">пользователей — вариант а</h1>
+            </div>
+            <div class="ovelray" id="ov2">
+              <h1 class="percent" id="per2"></h1>
+               <h1 class="text_overlay">пользователей — вариант б</h1>
+            </div>
+        </div>
+          <div class="wrapper">
+            <div class="pink_box">
+              <div class="white_box">
+                <div class="header_text_wrapper">
+                <span>Lorem ipsum</span>
+                </div>
+                <div class="text">
+                <p>Mauris vel nisi ac orci placerat semper. aenean sapien massa.</p>
+                </div>
+                <div class="question">
+                  <p>Lorem ipsum?</p>
+                </div>
+                  <a href="#start" class="button_header">Начать</a>
+              </div>
+            </div>
+            <div class="icon"></div>
+            <div class="yellow_box" id="start">
+            <div class="white_box_start">
+              <div class="icon_start"> </div>
+            <div class="header_text_start">
+            <span>Укажите свой пол:</span>
+            </div>
+             <a class="continue" id="continue" onclick="location.href='#next'" onclick="document.getElementById('ov1').setAttribute('style', 'display:none';document.getElementById('ov2').setAttribute('style', 'display:none')">
+             </a>
+            <a class="button" onclick="display('ov1');document.getElementById('continue').setAttribute('style', 'display:block')"></a>
+            <a class="button2" onclick="display('ov2');document.getElementById('continue').setAttribute('style', 'display:block')"></a>
           </div>
-          <div class="text">
-          <p>Mauris vel nisi ac orci placerat semper. aenean sapien massa.</p>
+        </div>
+        <div class="blue_box" id="next" >
+          <div class="white_box_next">
+            <div class="icon_next"> </div>
+            <div class="header_text_next">
+            <span>lorem ipsum dolor sit amet, consectetur adipiscing elit, <br>sed do eiusmod</span>
+            </div>
+            <div class="text_next">
+                <p>Я ищу:</p>
+            </div>
+            <div class="text_next1">
+                <p>Ваше имя:</p>
+            </div>
+            <div class="text_next2">
+                <p>Email:</p>
+            </div>
+            <div class="text_next3">
+                <p>Придумайте пароль:</p>
+            </div>
+            <a class="button_next" ></a>
+            <a class="button2_next" ></a>
+            <form class="form" action="" method="POST">
+                <input type="text" class="textbox" />
+                <input type="password" class="textbox" />
+                <input type="email" class="textbox" />
+                <p><input type="checkbox" name="agree">&nbsp;&nbsp;Регистрируясь, вы подтверждаете, что вам уже исполнилось<br />&nbsp;&nbsp;&nbsp;&nbsp;18 лет и вы ознакомились с условиями пользования сайтом. </p>
+              </form>
+            </div>
           </div>
-          <div class="question">
-            <p>Lorem ipsum?</p>
           </div>
-          <a href="#" class="button">Начать</a>
+        </div>
         </div>
       </div>
-      <div class="icon"> </div>
-      </div>
+        <script type="text/javascript">
+          var p = 0;
+          var p2 = 0;
+
+          function display(e) {
+            if (e === 'ov1') {
+              p += 1;
+              var res = (p * 100 / (p + p2));
+              document.getElementById(e).setAttribute('style', 'display:block');
+              document.getElementById('ov2').setAttribute('style', 'display:none');
+              document.getElementById('per1').innerHTML = res.toPrecision(3) + '%';
+            } else if (e === 'ov2') {
+              p2 += 1;
+              var res = (p2 * 100 / (p + p2));
+              document.getElementById(e).setAttribute('style', 'display:block');
+              document.getElementById('ov1').setAttribute('style', 'display:none');
+              document.getElementById('per2').innerHTML = res.toPrecision(3) + '%';
+            }
+          }
+        </script>
+        </section>
+        <footer>
+          <nav>
+            <ul class="menu-main">
+              <li><a href="#" > Название1 </a> </li>
+              <li><a href="#" > Название2 </a></li>
+              <li><a href="#" > Название3 </a></li>
+              <li><a href="#" > Название4 </a></li>
+              <li><a href="#" > Очень длинное название5 </a></li>
+              <li><a href="#" > очень очень длинное название6 </a></li>
+              <li><a href="#" > длинное название 7 </a></li>
+              <li><a href="#" > длинное название8 </a></li>
+            </ul>   
+          </nav>
+      </footer>
  </body>
 </html>

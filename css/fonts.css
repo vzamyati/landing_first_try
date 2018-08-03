@@ -21,3 +21,11 @@
 	font-style: normal;
 	font-weight: normal;
 }
+
+@font-face {
+	font-family: "OpenSans-ExtraBold";
+	src: url("../fonts/OpenSans/OpenSans-ExtraBold.eot?#iefix")format("embedded-opentype"),
+	url("../fonts/OpenSans/OpenSans-ExtraBold.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}

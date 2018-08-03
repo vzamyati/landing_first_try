@@ -1,28 +1,57 @@
 body {
 	margin:0;
 	padding:0;
-	height: 100%;
+	height: 100vh;
+	width: 100vw;
+	overflow: hidden;
+	position: absolute;
+	scroll-behavior: smooth;
 }
 
 .container {
-	background-image: linear-gradient(to left, rgb(58, 3, 30) -10%, transparent 90%), url(../img/bcg.png);
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-attachment: fixed;
 	margin: 0;
-	height: 100%;
-	min-width: 100%;
-	position: fixed;
+	height: 100vh;
+	width: 100vw;
+	position: absolute;
+	overflow: hidden;
+}
+
+.bg-img {
+	position: relative;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width: auto;
+	min-width: 50%;
+	max-width: calc(100vw - 500px);
+	width: auto;
+	background: linear-gradient(to left, rgb(58, 3, 30) -10%, transparent 30%), url(../img/bcg.png) no-repeat left;
+	background-size: cover;
+}
+
+.wrapper {
+	position: absolute;
+	display: inline-block;
+	top: 0;
+	right: 0;
+	height: 100vh;
+	min-width: 550px;
+	max-width: 1200px;
+	width: auto;
+	overflow-y: scroll;
+	overflow-x: visible;
+	scroll-behavior: smooth;
 }
 
 .pink_box {
+	position: relative;
+	top: 0;
 	z-index: 1;
 	background-color: #fc5094;
-	height: 100%;
+	height: 100vh;
 	width: 500px;
 	display: block;
 	float: right;
-	position: relative;
 }
 
 .white_box {
@@ -35,6 +64,170 @@ body {
 	position: absolute;
 }
 
+.yellow_box {
+	z-index: 1;
+	background-color: #fbc150;
+	height: 100%;
+	width: 850px;
+	display: block;
+	float: right;
+	position: relative;
+}
+
+.blue_box {
+	z-index: 1;
+	background-color: #1ca7bf;
+	height: 100%;
+	width: 850px;
+	display: block;
+	float: right;
+	position: relative;
+}
+
+.ovelray {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: calc(100vh - 80px);
+	width: calc(100vw - 850px);
+	background-color: rgba(251,193,79,0.7);
+	z-index: 1;
+}
+
+#ov1 {
+	display: none;
+}
+#ov2 {
+	display: none;
+}
+
+.percent {
+	font-family: "OpenSans-ExtraBold";
+	display: block;
+	font-size: 248px;
+	color: #fff;
+	text-transform: uppercase;
+    padding-left: 176px;
+    padding-top: 60px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    margin-top: 212px;
+
+}
+
+.text_overlay {
+	font-family: "OpenSans-ExtraBold";
+	display: block;
+	font-size: 41px;
+	color: #fff;
+	text-transform: uppercase;
+	text-align: center;
+	letter-spacing: 2px;
+	top: 0;
+	margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+.white_box_start {
+	background-color: #f6f5f5;
+	height: 80vh;
+	width: 835px;
+	display: block;
+	right: 0;
+	bottom: 0;
+	position: absolute;
+}
+
+.white_box_next {
+	background-color: #f6f5f5;
+	height: 80vh;
+	width: 835px;
+	display: block;
+	right: 0;
+	bottom: 0;
+	position: absolute;
+}
+
+.header_text_start span {
+	font-family: "OpenSans-Bold";
+	display: block;
+	color: #fbc150;
+	text-transform: uppercase;
+	font-size: 31px;
+	letter-spacing: 3px;
+	position: absolute;
+	margin-left: 75px;
+	bottom: 83%;
+}
+
+.button {
+	display: inline-block;
+    background-image: url(../img/varA.png);
+    background-repeat: no-repeat;
+    height: 94px;
+    width: 403px;
+    position: absolute;
+    top: 32%;
+    margin-left: 50px;
+    transition: all 300ms ease 0s;
+    cursor: pointer;
+}
+
+.button2 {
+	display: inline-block;
+    background-image: url(../img/varB.png);
+    background-repeat: no-repeat;
+    height: 94px;
+    width: 403px;
+    position: absolute;
+    top: 43%;
+    margin-left: 50px;
+    transition: all 300ms ease 0s;
+    cursor: pointer;
+}
+
+.continue {
+	display: none;
+    background-image: url(../img/continue.png);
+    background-repeat: no-repeat;
+    height: 94px;
+    width: 283px;
+    position: absolute;
+    top: 75%;
+    right: 445px;
+    transition: all 300ms ease 0s;
+    cursor: pointer;
+}
+
+.button:hover {
+	background-image: url(../img/varAyel.png);
+	transition: all 300ms ease 0s;
+}
+
+.button2:hover {
+	background-image: url(../img/varByel.png);
+	transition: all 300ms ease 0s;
+}
+
+.icon_start {
+	background-image: url(../img/01.png);
+	min-width: 120px;
+    min-height: 100px;
+    position: absolute;
+    right: 780px;
+    bottom: 80%;
+}
+
+.icon_next {
+	background-image: url(../img/02.png);
+	background-repeat: no-repeat;
+	min-width: 120px;
+    min-height: 100px;
+    position: absolute;
+    right: 761px;
+    bottom: 80%;
+}
+
 .icon {
 	z-index: 3;
 	background-image: url(../img/icon.png);
@@ -45,7 +238,7 @@ body {
     bottom: 64%;
 }
 
-.header_text span {
+.header_text_wrapper span {
 	font-family: "OpenSans-Bold";
 	display: block;
 	color: rgb(252, 80, 148);
@@ -81,7 +274,7 @@ body {
 	letter-spacing: 3px;
 }
 
-.button {
+.button_header {
 	display: inline-block;
     background-color: rgb(252, 80, 148);
     height: 80px;
@@ -100,26 +293,201 @@ body {
     border-radius: 20px;
 }
 
-.footer{
-   	background-color: rgba(255, 255, 255, 0.7);
+
+.header_text_start span {
+	font-family: "OpenSans-Bold";
+	display: block;
+	color: #fbc150;
+	text-transform: uppercase;
+	font-size: 31px;
+	letter-spacing: 3px;
+	position: absolute;
+	margin-left: 50px;
+	bottom: 83%;
+}
+
+.header_text_next {
+	font-family: "OpenSans-Bold";
+	display: block;
+	color: #1ca7bf;
+	text-transform: uppercase;
+	font-size: 31px;
+	letter-spacing: 2px;
+	position: absolute;
+	margin-left: 65px;
+	bottom: 75%;
+}
+
+.button_next {
+	display: inline-block;
+    background-image: url(../img/var1.png);
+    background-repeat: no-repeat;
+    height: 94px;
+    width: 225px;
+    position: absolute;
+    top: 32%;
+    margin-left: 65px;
+    transition: all 300ms ease 0s;
+    cursor: pointer;
+}
+
+.button2_next {
+	display: inline-block;
+    background-image: url(../img/var2.png);
+    background-repeat: no-repeat;
+    height: 94px;
+    width: 225px;
+    position: absolute;
+    top: 32%;
+    margin-left: 295px;
+    transition: all 300ms ease 0s;
+    cursor: pointer;
+}
+
+.button3_next {
+	display: inline-block;
+    background-image: url(../img/submit.png);
+    background-repeat: no-repeat;
+    height: 94px;
+    width: 287px;
+    position: absolute;
+    top: 79%;
+    margin-left: 5px;
+    transition: all 300ms ease 0s;
+    cursor: pointer;
+}
+
+.button_next:hover {
+	background-image: url(../img/var1bl.png);
+	transition: all 300ms ease 0s;
+}
+
+.button2_next:hover {
+	background-image: url(../img/var2bl.png);
+	transition: all 300ms ease 0s;
+}
+
+.button3_next:hover {
+	background-image: url(../img/submitbl.png);
+	transition: all 300ms ease 0s;
+}
+
+.text_next p{
+	font-family: "OpenSans-SemiBold";
+	color: #3b3b3b;
+	font-size: 18px;
+	letter-spacing: 1px;
+	line-height: 28px;
+	position: absolute;
+	margin-left: 65px;
+	top: 26%; 
+}
+
+.text_next1 p{
+	font-family: "OpenSans-SemiBold";
+	color: #3b3b3b;
+	font-size: 18px;
+	letter-spacing: 1px;
+	line-height: 28px;
+	position: absolute;
+	margin-left: 65px;
+	top: 40%; 
+}
+
+.text_next2 p{
+	font-family: "OpenSans-SemiBold";
+	color: #3b3b3b;
+	font-size: 18px;
+	letter-spacing: 1px;
+	line-height: 28px;
+	position: absolute;
+	margin-left: 65px;
+	top: 66%; 
+}
+
+.text_next3 p{
+	font-family: "OpenSans-SemiBold";
+	color: #3b3b3b;
+	font-size: 18px;
+	letter-spacing: 1px;
+	line-height: 28px;
+	position: absolute;
+	margin-left: 65px;
+	top: 53%; 
+}
+
+footer {
+	position: absolute;
+	bottom: 0;
+	width: auto;
+	height:80px;
+	background-color: rgba(255, 255, 255, 0.7);
     font-family: "OpenSans-Bold";
     font-size: 12px;
-	position:absolute;
     letter-spacing: 1px;
-   	bottom:0;
-   	width:100%;
-   	height:80px;
+}
+
+.form{
+  float:left;
+  height:55%;
+  width:92%;
+  box-sizing:border-box;
+  position: absolute;
+  top: 45%;
+  margin-left: 65px;
+}
+
+.form p {
+	font-family: "OpenSans-SemiBold";
+	color: #3b3b3b;
+	font-size: 13px;
+	margin-top: -20px;
+	left: 0;
+	width:440px;
+}
+
+.textbox{
+  height:80px;
+  width:455px;
+  border-radius:20px;
+  border:rgba(0,0,0,.2) 1px solid;
+  box-sizing:border-box;
+  top: 26%; 
+  padding:35px;
+  margin-bottom:35px;
+}
+
+.textbox:focus{
+  outline:none;
+   border:rgba(24,149,215,1) 2px solid;
+   color:rgba(24,149,215,1);
 }
 
 .menu-main {
   list-style: none;
-  padding: 25px 0 5px;
+  padding: 24px 0 5px;
   text-align: center;
-    margin-right: 605px;
+  margin-right: 605px;
 
 }
 
+@media screen and (max-width: 1887px) {
+	.menu-main {
+	  list-style: none;
+	  padding: 10px 0 5px;
+	  line-height: 20px;
+	  text-align: center;
+      margin-right: 605px;
+	}
+}
+
 .menu-main li {display: inline-block;}
+
+.menu-main li {
+	left: 2.2em;
+	position: relative;
+	padding-left: 1em;
+}
 
 .menu-main li:last-child:after {content: none;}
 .menu-main li:last-child:after {content: none;}
