@@ -8,6 +8,14 @@ body {
 	scroll-behavior: smooth;
 }
 
+section {
+	width: 100%;
+}
+
+.q {
+	width: 100%;
+}
+
 .container {
 	margin: 0;
 	height: 100vh;
@@ -29,6 +37,44 @@ body {
 	background-size: cover;
 }
 
+#bg {
+	display: block;
+}
+
+.bg-img2 {
+	position: relative;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width: auto;
+	min-width: 50%;
+	max-width: calc(100vw - 500px);
+	width: auto;
+	background: linear-gradient(to left, rgb(145, 108, 39) 10%, transparent 50%), url(../img/bcg.png) no-repeat left;
+	background-size: cover;
+}
+
+#bg2 {
+	display: none;
+}
+
+.bg-img3 {
+	position: relative;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width: auto;
+	min-width: 50%;
+	max-width: calc(100vw - 500px);
+	width: auto;
+	background: linear-gradient(to left, rgb(23, 129, 149) 10%, transparent 50%), url(../img/bcg.png) no-repeat left;
+	background-size: cover;
+}
+
+#bg-img3 {
+	display: none;
+}
+
 .wrapper {
 	position: absolute;
 	display: inline-block;
@@ -38,7 +84,7 @@ body {
 	min-width: 550px;
 	max-width: 1200px;
 	width: auto;
-	overflow-y: scroll;
+	overflow-y: hidden;
 	overflow-x: visible;
 	scroll-behavior: smooth;
 }
@@ -348,8 +394,8 @@ body {
 	display: inline-block;
     background-image: url(../img/submit.png);
     background-repeat: no-repeat;
-    height: 94px;
-    width: 287px;
+    height: 81px;
+    width: 284px;
     position: absolute;
     top: 79%;
     margin-left: 5px;
@@ -427,7 +473,7 @@ footer {
     letter-spacing: 1px;
 }
 
-.form{
+.form {
   float:left;
   height:55%;
   width:92%;
@@ -435,6 +481,10 @@ footer {
   position: absolute;
   top: 45%;
   margin-left: 65px;
+}
+
+#foot {
+
 }
 
 .form p {
@@ -459,8 +509,16 @@ footer {
 
 .textbox:focus{
   outline:none;
-   border:rgba(24,149,215,1) 2px solid;
-   color:rgba(24,149,215,1);
+  border:rgba(24,149,215,1) 1px solid;
+  color:rgba(24,149,215,1);
+}
+
+input:invalid:not(:placeholder-shown) {
+	border:red 1px solid;
+}
+
+input:valid:not(:placeholder-shown) {
+	border:green 1px solid;
 }
 
 .menu-main {
@@ -469,6 +527,11 @@ footer {
   text-align: center;
   margin-right: 605px;
 
+}
+
+button {
+	background-color: #f6f5f5;
+	border: 0px;
 }
 
 @media screen and (max-width: 1887px) {
