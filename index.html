@@ -10,7 +10,6 @@
  </head>
  <body>
     <section>
-      <div>
       <div class="container">
         <div class="bg-img" id="bg">
            <div class="bg-img2" id="bg2">
@@ -25,8 +24,8 @@
             </div>
             </div>
           </div>
-        </div>
-          <div class="wrapper">
+      </div>
+      <div class="wrapper">
             <div class="pink_box">
               <div class="white_box">
                 <div class="header_text_wrapper">
@@ -72,22 +71,27 @@
             <div class="text_next3">
                 <p>Придумайте пароль:</p>
             </div>
-            <a class="button_next" ></a>
-            <a class="button2_next" ></a>
-            <form id="f" class="form" action="#" method="POST">
-                <input id="name" type="text" class="textbox" placeholder="Введите своё имя" required/>
-                <input type="password" class="textbox" placeholder=" " required />
-                <input type="email" class="textbox" placeholder=" " required/>
-                <p><input type="checkbox" name="agree" required="">&nbsp;&nbsp;Регистрируясь, вы подтверждаете, что вам уже исполнилось<br />&nbsp;&nbsp;&nbsp;&nbsp;18 лет и вы ознакомились с условиями пользования сайтом. </p>
-                <button type="submit" class="button3_next" ></button>
+            <a class="button_next" id="bn" onclick="display('bn_ch')">
+              <a class="button_next_ch" id="bn_ch"></a>
+            </a>
+            <a class="button2_next" id="bn2" onclick="display('bn2_ch')">
+              <a class="button2_next_ch" id="bn2_ch"></a>
+            </a>
+            <form name="form" class="form" action="#" method="post" onsubmit="return validate_form();">
+                <input name="name" type="text" class="textbox" placeholder=" " id="name"/>
+                <input name="email" type="email" class="textbox" placeholder=" " id="email"/>
+                <input name="password" type="password" class="textbox" placeholder=" " id="password"/>
+                <p><input type="checkbox" name="agree" onclick="display('bn3_ch')" required>&nbsp;&nbsp;Регистрируясь, вы подтверждаете, что вам уже исполнилось<br />&nbsp;&nbsp;&nbsp;&nbsp;18 лет и вы ознакомились с условиями пользования сайтом. </p>
+                <button type="submit" class="button3_next" id="bn3">
+                  <button type="submit" class="button3_next_ch" id="bn3_ch"></button>
+                </button>
               </form>
             </div>
           </div>
-          </div>
-        </div>
+      </div>
       <footer id="foot">
           <nav>
-            <ul class="menu-main">
+            <ul class="menu-main" id="menu">
               <li><a href="#" > Название1 </a> </li>
               <li><a href="#" > Название2 </a></li>
               <li><a href="#" > Название3 </a></li>
@@ -100,32 +104,6 @@
           </nav>
       </footer>
     </section>
-      <script type="text/javascript">
-          var p = 0;
-          var p2 = 0;
-
-          function display(e) {
-            if (e === 'ov1') {
-              p += 1;
-              var res = (p * 100 / (p + p2));
-              document.getElementById(e).setAttribute('style', 'display:block');
-              document.getElementById('ov2').setAttribute('style', 'display:none');
-              document.getElementById('per1').innerHTML = res.toPrecision(3) + '%';
-            } else if (e === 'ov2') {
-              p2 += 1;
-              var res = (p2 * 100 / (p + p2));
-              document.getElementById(e).setAttribute('style', 'display:block');
-              document.getElementById('ov1').setAttribute('style', 'display:none');
-              document.getElementById('per2').innerHTML = res.toPrecision(3) + '%';
-            } else if (e === 'bg2') {
-              document.getElementById('bg3').setAttribute('style', 'display:none');
-              document.getElementById(e).setAttribute('style', 'display:block');
-            } else if (e === 'bg') {
-              document.getElementById('bg3').setAttribute('style', 'display:block');
-              document.getElementById('ov1').setAttribute('style', 'display:none');
-              document.getElementById('ov2').setAttribute('style', 'display:none');
-            }
-          }
-        </script>
+      <script src="js/main.js"></script>
  </body>
 </html>
