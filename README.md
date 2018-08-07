@@ -1,5 +1,5 @@
 # landing_first_try
-First project in UI/UX-Design, landing pageas testing task for Genesis.
+First project in UI/UX-Design, landing page as testing task for Genesis.
 
 # DESCRIPTION
 
