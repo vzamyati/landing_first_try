@@ -3,7 +3,7 @@ First project in UI/UX-Design, landing page as testing task for Genesis.
 
 # DESCRIPTION
 
-Task: make one of the proposed options for lending (mobile or desktop). Select 2-3 of the available screens (the mandatory screen is the registration form).
+Task: make one of the proposed options for landing (mobile or desktop). Select 2-3 of the available screens (the mandatory screen is the registration form).
 Task is written with HTML5/CSS3 + JavaScript (without jQuery-plugins).
 
 ## INSTALL
